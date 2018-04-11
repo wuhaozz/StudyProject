@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithm/Algorithm.iml" filepath="$PROJECT_DIR$/Algorithm/Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/MVCFramework/MVCFramework.iml" filepath="$PROJECT_DIR$/MVCFramework/MVCFramework.iml" />
       <module fileurl="file://$PROJECT_DIR$/RedisClient/RedisClient.iml" filepath="$PROJECT_DIR$/RedisClient/RedisClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoootDemo/SpringBoootDemo.iml" filepath="$PROJECT_DIR$/SpringBoootDemo/SpringBoootDemo.iml" />

@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MVCFramework" />
+        <module name="Algorithm" />
         <module name="SpringBoootDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="Algorithm" target="1.8" />
       <module name="HashMapDemo" target="1.8" />
       <module name="MVCFramework" target="1.8" />
       <module name="RedisClient" target="1.8" />
