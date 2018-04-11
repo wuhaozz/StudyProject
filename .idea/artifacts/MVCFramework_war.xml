@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MVCFramework:war">
+    <output-path>$PROJECT_DIR$/MVCFramework/target</output-path>
+    <root id="archive" name="MVCFramework-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="MVCFramework:war exploded" />
+    </root>
+  </artifact>
+</component>
