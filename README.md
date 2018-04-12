@@ -18,3 +18,8 @@
 学习Zookeeeper
 
 利用Zookeeeper实现分布式锁
+
+# Algorithm
+学习算法相关
+
+QuickSort   快速排序
