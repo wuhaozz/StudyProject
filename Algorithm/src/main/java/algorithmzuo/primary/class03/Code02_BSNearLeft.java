@@ -1,40 +1,40 @@
-package algorithmzuo.noob.class03;
+package algorithmzuo.primary.class03;
 
 import java.util.Arrays;
 
 /**
- * 二分查找
+ * 使用二分找到有序数组中>=num最左的位置
  */
-public class Code01_BSExist {
+public class Code02_BSNearLeft {
 
-    // arr保证有序
-    public static boolean find(int[] arr, int num) {
+    // arr保证有序，找 >= num 最左的位置
+    public static int mostLeftNoLessNumIndex(int[] arr, int num) {
         if (arr == null || arr.length == 0) {
-            return false;
+            return -1;
         }
         int left = 0;
         int right = arr.length - 1;
+        int ans = -1;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (arr[mid] == num) {
-                return true;
-            } else if (arr[mid] < num) {
-                left = mid + 1;
-            } else {
+            if (arr[mid] >= num) {
+                ans = mid;
                 right = mid - 1;
+            } else {
+                left = mid + 1;
             }
         }
-        return false;
+        return ans;
     }
 
     // for test
-    public static boolean test(int[] sortedArr, int num) {
-        for (int cur : sortedArr) {
-            if (cur == num) {
-                return true;
+    public static int test(int[] arr, int value) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= value) {
+                return i;
             }
         }
-        return false;
+        return -1;
     }
 
     // for test
@@ -46,6 +46,17 @@ public class Code01_BSExist {
         return arr;
     }
 
+    // for test
+    public static void printArray(int[] arr) {
+        if (arr == null) {
+            return;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         int testTime = 500000;
         int maxSize = 10;
@@ -55,8 +66,11 @@ public class Code01_BSExist {
             int[] arr = generateRandomArray(maxSize, maxValue);
             Arrays.sort(arr);
             int value = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
-            if (test(arr, value) != find(arr, value)) {
-                System.out.println("出错了！");
+            if (test(arr, value) != mostLeftNoLessNumIndex(arr, value)) {
+                printArray(arr);
+                System.out.println(value);
+                System.out.println(test(arr, value));
+                System.out.println(mostLeftNoLessNumIndex(arr, value));
                 succeed = false;
                 break;
             }

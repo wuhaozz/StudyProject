@@ -1,4 +1,4 @@
-package algorithmzuo.noob.class01;
+package algorithmzuo.primary.class01;
 
 /**
  * 插入排序

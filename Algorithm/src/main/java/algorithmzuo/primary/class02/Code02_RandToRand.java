@@ -1,4 +1,4 @@
-package algorithmzuo.noob.class02;
+package algorithmzuo.primary.class02;
 
 /**
  * 把 1~5等概率随机的函数f1() 改造成 1~7 等概率随机函数

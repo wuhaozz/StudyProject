@@ -1,14 +1,14 @@
-package algorithmzuo.noob.class03;
+package algorithmzuo.primary.class03;
 
 import java.util.Arrays;
 
 /**
- * 使用二分找到有序数组中>=num最左的位置
+ * 使用二分找到有序数组中<=num最右的位置
  */
-public class Code02_BSNearLeft {
+public class Code02_BSNearRight {
 
-    // arr保证有序，找 >= num 最左的位置
-    public static int mostLeftNoLessNumIndex(int[] arr, int num) {
+    // arr保证有序，找 <= num 最右的位置
+    public static int nearestIndex(int[] arr, int num) {
         if (arr == null || arr.length == 0) {
             return -1;
         }
@@ -17,11 +17,11 @@ public class Code02_BSNearLeft {
         int ans = -1;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (arr[mid] >= num) {
+            if (arr[mid] <= num) {
                 ans = mid;
-                right = mid - 1;
-            } else {
                 left = mid + 1;
+            } else {
+                right = mid - 1;
             }
         }
         return ans;
@@ -66,11 +66,11 @@ public class Code02_BSNearLeft {
             int[] arr = generateRandomArray(maxSize, maxValue);
             Arrays.sort(arr);
             int value = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
-            if (test(arr, value) != mostLeftNoLessNumIndex(arr, value)) {
+            if (test(arr, value) != nearestIndex(arr, value)) {
                 printArray(arr);
                 System.out.println(value);
                 System.out.println(test(arr, value));
-                System.out.println(mostLeftNoLessNumIndex(arr, value));
+                System.out.println(nearestIndex(arr, value));
                 succeed = false;
                 break;
             }

@@ -1,4 +1,4 @@
-package algorithmzuo.noob.class02;
+package algorithmzuo.primary.class02;
 
 /**
  * 用对数器实现测试功能

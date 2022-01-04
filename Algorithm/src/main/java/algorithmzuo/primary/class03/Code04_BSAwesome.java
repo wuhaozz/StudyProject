@@ -1,4 +1,4 @@
-package algorithmzuo.noob.class03;
+package algorithmzuo.primary.class03;
 
 /**
  * 局部最小值
