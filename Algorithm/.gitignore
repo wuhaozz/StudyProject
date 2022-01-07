@@ -31,3 +31,4 @@ build/
 ### Other ###
 /mvnw
 /mvnw.cmd
+/src/main/java/test/
